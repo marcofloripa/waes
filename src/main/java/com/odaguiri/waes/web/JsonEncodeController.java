@@ -39,9 +39,10 @@ public class JsonEncodeController {
 	 * @return
 	 * @throws URISyntaxException
 	 */
-	@ApiOperation(value = "Create a shortened url")
+	@ApiOperation(value = "Create a Json encoded with 'left' content")
     @ApiResponses(value = {
-            @ApiResponse(code = 400, message = "Invalid longUrl parameter provided")
+    		@ApiResponse(code = 201, message = "Json encoded created with success"),
+    		@ApiResponse(code = 200, message = "Json encoded updated with success")
     })
 	@RequestMapping(value = "/{id}/left",
 	        method = RequestMethod.POST,
@@ -60,9 +61,10 @@ public class JsonEncodeController {
 	 * @return
 	 * @throws URISyntaxException
 	 */
-	@ApiOperation(value = "Create a shortened url")
+	@ApiOperation(value = "Create a Json encoded with 'right' content")
     @ApiResponses(value = {
-            @ApiResponse(code = 400, message = "Invalid longUrl parameter provided")
+    		@ApiResponse(code = 201, message = "Json encoded created with success"),
+    		@ApiResponse(code = 200, message = "Json encoded updated with success")
     })
 	@RequestMapping(value = "/{id}/right",
 	        method = RequestMethod.POST,
@@ -81,9 +83,10 @@ public class JsonEncodeController {
 	 * @throws JsonEncodeNotFoundException 
 	 * @throws URISyntaxException 
 	 */
-	@ApiOperation(value = "Create a shortened url")
+	@ApiOperation(value = "Process the Json encoded comparison")
     @ApiResponses(value = {
-            @ApiResponse(code = 400, message = "Invalid longUrl parameter provided")
+            @ApiResponse(code = 200, message = "Json encoded compare with success"),
+            @ApiResponse(code = 404, message = "Json encoded not found")
     })
 	@RequestMapping(value = "/{id}",
 	        method = RequestMethod.GET,
