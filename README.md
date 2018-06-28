@@ -1,4 +1,4 @@
-# Analyse Json Encoded API
+# Json Encoded Comparison API
 Api responsible for analyse json encoded content
 
 ### Prerequisites
@@ -26,8 +26,8 @@ $ mvn spring-boot:run
 ## Database
 
 The application will create two databases on the user home in the h2 folder:
-	- waes.mv.db
-	- waes_test.mv.db 
+* waes.mv.db
+* waes_test.mv.db 
 
 You can acces the h2 database on the browser: http://localhost:8080/h2-console
 
